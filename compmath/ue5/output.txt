@@ -619,4 +619,4 @@
 
 
 > quit
-memory used=3.7MB, alloc=8.3MB, time=0.05
+memory used=3.7MB, alloc=8.3MB, time=0.06
