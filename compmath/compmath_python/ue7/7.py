@@ -21,11 +21,11 @@ def f_c(dictionary):
     return res
 
 
-def f_d(dictionary):    # TODO
+def f_d(dictionary):        # works for depth 2
     res = {}
-    for key, val in dictionary.items():
-        res.update(dict())
-
+    for key_o, val_o in dictionary.items():
+        for key_i, val_i in val_o.items():
+            res[key_i] = {key_o: val_i}
     return res
 
 
@@ -40,3 +40,5 @@ if __name__ == "__main__":
     print(f_c({'gfg': [1, 3, 4], 'is': [7, 6], 'best': [4, 5]}))
 
     print(f_d({"a": {"b": {}}, "d": {"e": {}}, "f": {"g": {}}}))
+
+    print(f_d({"a": {"b": {}, "c": {}}, "d": {"e": {}}, "f": {"g": {}}}))
