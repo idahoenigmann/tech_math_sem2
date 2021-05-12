@@ -29,6 +29,51 @@ def f_d(dictionary):        # works for depth 2
     return res
 
 
+def f_d1(dictionary):
+    res = []
+    for key, val in dictionary.items():
+        tmp = f_d2(val)
+        tmp.insert(0, key)
+        res.append(tmp)
+    return res
+
+
+def f_d2(dictionary):
+    if not dictionary:
+        return []
+    lst = []
+    for key, val in dictionary.items():
+        lst.append(key)
+        for e in f_d2(val):
+            lst.append(e)
+    return lst
+
+
+def f_d3(lst):
+    res = []
+    for l in lst:
+        res.append(l[::-1])
+    return res
+
+
+def f_d4(lst):
+    dictionary = {}
+    for e in lst[::-1]:
+        dictionary = {e: dictionary}
+    return dictionary
+
+
+def f_d5(dictionary):
+    lst = f_d1(dictionary)
+    lst = f_d3(lst)
+    dictionary = {}
+    for sub_list in lst:
+        d = f_d4(sub_list)
+        for key, val in d.items():
+            dictionary[key] = val
+    return dictionary
+
+
 if __name__ == "__main__":
     dictionary = OrderedDict(a=1, b=2)
     print(dictionary)
@@ -42,3 +87,5 @@ if __name__ == "__main__":
     print(f_d({"a": {"b": {}}, "d": {"e": {}}, "f": {"g": {}}}))
 
     print(f_d({"a": {"b": {}, "c": {}}, "d": {"e": {}}, "f": {"g": {}}}))
+
+    print(f_d5({"a": {"b": {"c": {"z": {}}}}, "d": {"e": {"y": {}}}, "f": {"g": {}}}))
