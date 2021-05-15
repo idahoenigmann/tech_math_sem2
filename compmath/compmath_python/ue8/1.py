@@ -1,0 +1,76 @@
+
+from math import sin, cos, exp
+
+
+def dev(fun):
+    def inner_dev(ev):
+        return fun(ev)
+    return inner_dev
+
+
+def comp(l):
+    def inner_comp(val):
+        res = l[-1](val)
+        # print(l[-1])
+        for f in l[:-1][::-1]:
+            # print(f)
+            res = f(res)
+        return res
+    return inner_comp
+
+
+def count(f):
+    counter = 0
+
+    def inner_count(*args):
+        nonlocal counter
+        counter += 1
+        return counter, f(*args)
+
+    return inner_count
+
+
+@dev
+def sin_(x):
+    return sin(x)
+
+
+@dev
+def exp_(x):
+    return exp(x)
+
+
+@count
+def foo():
+    print("Hello World!")
+
+
+class Test:
+    def foo(self, x):
+        print(f"executing foo({self}, {x})")
+
+    @classmethod
+    def c_foo(cls, x):
+        print(f"executing class_foo({cls}, {x})")
+
+    @staticmethod
+    def s_foo(x):
+        print(f"executing static_foo({x})")
+
+
+if __name__ == "__main__":
+    print(sin_(1))
+    print(exp_(1))
+
+    sin_exp = comp([sin, exp, sin, sin])        # TODO
+    print(sin_exp(1))
+
+    print(foo())
+
+    Test.s_foo(1)
+    Test.c_foo(2)
+
+    t = Test()
+
+    t.foo(3)
+    t.c_foo(4)
