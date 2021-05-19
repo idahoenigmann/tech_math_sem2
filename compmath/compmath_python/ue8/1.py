@@ -19,6 +19,17 @@ def count(f):
     return inner_count
 
 
+def comp(*args):
+    def wrapper(f):
+        def inner_comp(val):
+            res = f(val)
+            for g in args[::-1]:
+                res = g(res)
+            return res
+        return inner_comp
+    return wrapper
+
+
 @dev
 def sin_(x):
     return sin(x)
@@ -32,6 +43,11 @@ def exp_(x):
 @count
 def foo():
     print("Hello World!")
+
+
+@comp(cos, exp)
+def foo2(x):
+    return x + 2
 
 
 class Test:
@@ -52,6 +68,9 @@ if __name__ == "__main__":
     print(exp_(1))
 
     print(foo())
+
+    print(foo2(1))
+    print(foo2(5))
 
     Test.s_foo(1)
     Test.c_foo(2)
