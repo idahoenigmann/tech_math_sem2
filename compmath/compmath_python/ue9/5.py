@@ -35,6 +35,6 @@ if __name__ == "__main__":
 
     """
     a) siehe Satz 7.4.2 aus Lineare Algebra für Technische Mathematiker von Hans Havlicek
-    b) siehe Zettel
+    b) siehe Zettel (Kurzfassung: L * angegebene Matrix = Einheitsmatrix)
     """
 
