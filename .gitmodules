@@ -2,3 +2,6 @@
 	path = extern/pybind11
 	url = ../../pybind/pybind11
 	branch = stable
+[submodule "compmath/compmath_python/ue9/problem3"]
+	path = compmath/compmath_python/ue9/problem3
+	url = https://github.com/pybind/cmake_example.git

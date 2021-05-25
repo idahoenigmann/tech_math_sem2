@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/compmath_python.iml" filepath="$PROJECT_DIR$/.idea/compmath_python.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/compmath_python1.iml" filepath="$PROJECT_DIR$/.idea/compmath_python1.iml" />
     </modules>
   </component>
 </project>
