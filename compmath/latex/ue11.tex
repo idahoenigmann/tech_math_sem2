@@ -1,0 +1,95 @@
+\documentclass[]{article}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+%opening
+\title{Homework 1}
+\author{Ida Hönigmann}
+
+\begin{document}
+
+\maketitle
+
+\section*{Problem 1}
+
+\begin{align*}
+	p(t)=det(A-t \cdot \textrm{Id}) =
+	\begin{array}{|cccc|}
+		a_{11}-t & a_{12} & \cdots & a_{1n} \\
+		a_{21} & a_{22} - t & \cdots & a_{2n} \\
+		\vdots & \vdots & & \vdots \\
+		a_{n1}-t & a_{n2} & \cdots & a_{nn} - t \\
+	\end{array}
+\end{align*}
+
+
+\section*{Problem 2}
+
+The Gamma function is defined as
+
+\begin{align*}
+	\Gamma (x) := \lim\limits_{n \to \infty} \frac{n! n^x}{x(x+1)\cdots (x+n)}
+\end{align*}
+
+\noindent
+There holds the Weierstraß product representation
+
+\begin{align*}
+	\frac{1}{\Gamma (x)} = x \cdot e^{Cx} \cdot \prod_{k=1}^{\infty} (1 + \frac{x}{k}) e^{-k/k} && \textrm{with} && C := \lim\limits_{n \to \infty} (\sum_{k=1}^{n} \frac{1}{k} - \ln n)
+\end{align*}
+
+
+\section*{Problem 3}
+
+Let $f,g : \mathbb{R} \to \mathbb{R}$ be given functions given by
+
+\begin{align*}
+	f(x) := \left\{
+	\begin{array}{ll}
+		-1 & \textrm{if}\ x < - \frac{\pi}{2}, \\
+		\sin (x) & \textrm{if}\ - \frac{\pi}{2} \leq x \leq \frac{\pi}{2}, \\
+		1 & \textrm{if}\ x > \frac{\pi}{2}. \\
+	\end{array}
+	\right. & \textrm{and} & 
+	g(x) := \left\{
+	\begin{array}{ll}
+		1 & \textrm{if}\ x \in \mathbb{Q}, \\
+		0 & \textrm{if}\ x \in \mathbb{R} \setminus \mathbb{Q}. \\
+	\end{array}
+	\right.
+\end{align*}
+
+\section*{Problem 4}
+
+For $q \in \mathbb{R}$, it holds that
+
+\begin{align*}
+	\lim\limits_{n \to \infty} q^n = 
+	\left\{
+	\begin{array}{ll}
+		+\infty & \textrm{if}\ q > 1, \\
+		1 & \textrm{if}\ q = 1, \\
+		0 & \textrm{if}\ -1 < q < 1, \\
+		\nexists & \textrm{if}\ q \leq -1. \\
+	\end{array}
+	\right.
+\end{align*}
+
+
+\section*{Problem 5}
+
+\begin{align*}
+	A := \left(
+	\begin{array}{ccccc}
+		\alpha & 2\alpha & 3\alpha & \cdots & n\alpha \\
+		0      & \alpha  & 2\alpha & \ddots & \vdots  \\
+		0      & 0       & \ddots  & \ddots & 3\alpha \\
+		\vdots & \ddots  & \ddots  & \ddots & 2\alpha \\
+		0      & \cdots  & 0       & 0      & \alpha  \\
+	\end{array}
+	\right) \in \mathbb{R}^{n \times n}_{\textrm{tria}}
+\end{align*}
+
+\end{document}
