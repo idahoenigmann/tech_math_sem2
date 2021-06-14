@@ -3,10 +3,14 @@
 \usepackage{latexsym}
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{enumerate}
 
 %opening
 \title{Homework 1}
 \author{Ida Hönigmann}
+
+\newtheorem{theorem}{Theorem}
+\newenvironment{proof}{\textit{\textbf{Proof}}}{\hfill$\blacksquare$}
 
 \begin{document}
 
@@ -15,7 +19,7 @@
 \section*{Problem 1}
 
 \begin{align*}
-	p(t)=det(A-t \cdot \textrm{Id}) =
+	p(t)=\textrm{det}(A-t \cdot \textrm{Id}) =
 	\begin{array}{|cccc|}
 		a_{11}-t & a_{12} & \cdots & a_{1n} \\
 		a_{21} & a_{22} - t & \cdots & a_{2n} \\
@@ -91,5 +95,41 @@ For $q \in \mathbb{R}$, it holds that
 	\end{array}
 	\right) \in \mathbb{R}^{n \times n}_{\textrm{tria}}
 \end{align*}
+
+
+\section*{Problem 6}
+
+$a^{3} b^{2} c - a^{3} b^{2} d - a^{3} b c^{2} + a^{3} b d^{2} + a^{3} c^{2} d - a^{3} c d^{2} - a^{2} b^{3} c + a^{2} b^{3} d + a^{2} b c^{3} - a^{2} b d^{3} - a^{2} c^{3} d + a^{2} c d^{3} + a b^{3} c^{2} - a b^{3} d^{2} - a b^{2} c^{3} + a b^{2} d^{3} + a c^{3} d^{2} - a c^{2} d^{3} - b^{3} c^{2} d + b^{3} c d^{2} + b^{2} c^{3} d - b^{2} c d^{3} - b c^{3} d^{2} + b c^{2} d^{3}$
+
+\section*{Problem 7}
+
+\begin{theorem}
+	For $a,b \in \mathbb{R}$ and a continuous function $f : (a, b) \to \mathbb{R}$, the following two assertions are equivalent:
+	
+	\begin{enumerate}[(i)]
+		\item $f$ is uniformly continuous.
+		\item $f$ has a continuous extension onto the compact interval $[a,b]$, i.e., there exists a function $\hat{f} : [a, b] \to \mathbb{R}$ with $\hat{f}=f(x)$ for all $x \in (a, b)$.
+	\end{enumerate}
+
+	In this case the continuous extension $\hat{f}$ is even unique.
+\end{theorem}
+
+\begin{proof}
+	TODO
+\end{proof}
+
+\section*{Problem 8}
+
+\begin{theorem}
+	For real numbers $x, y \in \mathbb{R}$ and $n \in \mathbb{N}$ we have
+	
+	\begin{align*}
+		(x+y)^n = \sum_{k=0}^{n} \binom{n}{k} x^{n-k} y^k.
+	\end{align*}
+\end{theorem}
+
+\begin{proof}
+	TODO
+\end{proof}
 
 \end{document}
