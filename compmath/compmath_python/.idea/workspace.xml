@@ -30,8 +30,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a3d012f-188e-4462-9b11-078d9fd0bb25" name="Default Changelist" comment="compmath ue10, problem 4">
-      <change beforePath="$PROJECT_DIR$/../latex/ue11.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../latex/ue11.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../latex/ue11/problem_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/../latex/ue11/problem_6.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +79,6 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
@@ -291,7 +289,8 @@
       <workItem from="1623045002939" duration="6838000" />
       <workItem from="1623242119264" duration="4332000" />
       <workItem from="1623258112124" duration="998000" />
-      <workItem from="1623668461430" duration="2063000" />
+      <workItem from="1623668461430" duration="2666000" />
+      <workItem from="1623739190900" duration="1069000" />
     </task>
     <task id="LOCAL-00001" summary="work on compmath ue6">
       <created>1619895505273</created>
