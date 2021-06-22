@@ -74,11 +74,20 @@ The .toc file stores information regarding the table of contents. It is created 
 
 \section{Problem 4}
 \begin{theorem}
-	If $A \in \mathbb{R}^{n \times n}$ is a matrix with $\sum_{j,k=1}^{n}x_j A_{jk} x_k > 0$ for all $x \in \mathbb{R}^n$ then $A$ is regular.
+	If $A \in \mathbb{R}^{n \times n}$ is a matrix with $\sum_{j,k=1}^{n}x_j A_{jk} x_k > 0$ for all $x \in \mathbb{R}^n \setminus \{0\}$ then $A$ is regular.
 \end{theorem}
 
 \begin{proof}
-	TODO
+	Let $A \in \mathbb{R}^{n\times n}$ be an arbitrary matrix with $\sum_{j,k=1}^{n}x_j A_{jk} x_k > 0$ for all $x \in \mathbb{R}^n \setminus \{0\}$. Let $x \in \mathbb{R}^n \setminus \{0\}$ be an arbitrary vector.
+	
+	\begin{align*}
+		0 < \sum_{j,k=1}^{n}x_j A_{jk} x_k &= \sum_{j,k=1}^{n}x_j (e_j^T A e_k) x_k \\
+		&= \sum_{j,k=1}^{n}(x_j e_j^T) A (e_k x_k) \\
+		&= \left(\sum_{j=1}^{n}(x_j e_j^T)\right) A \left(\sum_{k=1}^{n}(x_k e_k)\right) \\
+		&= x^T A x
+	\end{align*}
+
+	Therefore $A$ is positive definite, which implies that $\mathrm{det}A > 0$. So $A$ must be regular.
 \end{proof}
 
 \section{Problem 5}
